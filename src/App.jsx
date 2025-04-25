@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import BookList from './components/BookList';
+import BookList from './components/BookList'; // Corrected the import (uppercase "L")
+import './App.css';
 
 const App = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    // Simulate fetching books (e.g., from an API)
     const bookData = [
       {
         title: 'To Kill a Mockingbird',
@@ -24,15 +24,14 @@ const App = () => {
       },
     ];
 
-    // Simulate a delay (like an API call)
     setTimeout(() => {
       setBooks(bookData);
     }, 1000);
-  }, []); // Empty dependency array means this runs once on mount
+  }, []);
 
   return (
-    <div>
-      <h1 style={{ textAlign: 'center', padding: '20px' }}>Book List</h1>
+    <div className="book-app">
+      <h1>Book List</h1>
       <BookList books={books} />
     </div>
   );
