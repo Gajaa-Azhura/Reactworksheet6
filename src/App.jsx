@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import BookList from './components/BookList'; // Corrected the import (uppercase "L")
+import BookList from '../src/components/Booklist';
 import './App.css';
 
 const App = () => {
@@ -8,19 +8,19 @@ const App = () => {
   useEffect(() => {
     const bookData = [
       {
-        title: 'To Kill a Mockingbird',
-        author: 'Harper Lee',
-        description: 'A story about racial injustice and the loss of innocence in a small Southern town.',
+        title: 'The Alchemist',
+        author: 'Paulo Coelho',
+        description: 'A journey of self-discovery following a young shepherd.',
       },
       {
-        title: '1984',
-        author: 'George Orwell',
-        description: 'A dystopian novel about totalitarian surveillance and control.',
+        title: 'Pride and Prejudice',
+        author: 'Jane Austen',
+        description: 'A classic romance novel exploring love and social class.',
       },
       {
-        title: 'The Great Gatsby',
-        author: 'F. Scott Fitzgerald',
-        description: 'A tale of wealth, ambition, and unrequited love in the Roaring Twenties.',
+        title: 'The Hobbit',
+        author: 'J.R.R. Tolkien',
+        description: 'An adventure of a hobbit in a fantastical world.',
       },
     ];
 
